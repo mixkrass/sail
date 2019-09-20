@@ -1,0 +1,166 @@
+.features {
+  padding-top:140px;
+  overflow: hidden;
+  padding-bottom: 14.881vw;
+  .block-head {
+    width: 100%;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 130%;
+    color: #111820;
+  }
+  #parallaxContainer {
+    padding-top:50px;
+    .left {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      transform: translate3d(0,-50px,0);
+      &.left1 {
+        opacity:1;
+        transform: translate3d(0,0,0);
+      }
+    }
+  }
+  .item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom:7.143vw;
+    transition: transform .3s ease-out, opacity .3s ease-out;
+    transform: translate3d(0,100px,0);
+    opacity: 0;
+    transition-delay: .3s ;
+    &.show {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+    .left {
+      width: 100%;
+      max-width: 380px;
+      &.left-mt {
+        margin-top:60px;
+      }
+      .img-mob {
+        width: 100%;
+        display: none;
+      }
+      .head {
+        width: 100%;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 50px;
+        color: #111820;
+        position: relative;
+        padding-left:60px;
+        box-sizing: border-box;
+        margin-bottom:32px;
+        &.ic1 {
+          &:before {
+            background-image: url('../img/featurs1.svg');
+          }
+        }
+        &.ic2 {
+          &:before {
+            background-image: url('../img/featurs2.svg');
+          }
+        }
+        &.ic3 {
+          &:before {
+            background-image: url('../img/featurs3.svg');
+          }
+        }
+        &.ic3_2 {
+          &:before {
+            background-image: url('../img/featurs3_2.svg');
+          }
+        }
+        &.ic3_3 {
+          &:before {
+            background-image: url('../img/featurs3_3.svg');
+          }
+        }
+        &.ic4 {
+          &:before {
+            background-image: url('../img/featurs4.svg');
+          }
+        }
+        &.ic5 {
+          &:before {
+            background-image: url('../img/featurs5.svg');
+          }
+        }
+        &:before {
+          content: '';
+          display: inline-block;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          position: absolute;
+          left: 0px;
+          top: 0;
+          width: 50px;
+          height:100%;
+        }
+      }
+      .desc {
+        width: 100%;
+        display: inline-block;
+        margin: 0;
+        font-size: 16px;
+        line-height: 32px;
+        color: #7A8898;
+        margin-bottom: 40px;
+      }
+    }
+
+    .right {
+      width: 100%;
+      height:29.762vw;
+      position: relative;
+      pointer-events: none;
+      .img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height:100%;
+        width: 100%;
+        img {
+          position: absolute;
+          left:-100px;
+          top: 0;
+          max-width: 1375px;
+          &.big-img {
+            left:auto;
+            right: -35vw;
+            top:-6vw;
+            max-width: 2674px;
+          }
+          &.paral {
+            z-index: 1;
+          }
+          &.over1 {
+            top:6.929vw;
+          }
+          &.over2 {
+            top:32.738vw;
+          }
+          &.over2_1 {
+            top:1vw;
+          }
+          &.over3 {
+            top:3.548vw;
+          }
+          &.over4 {
+            top:14.881vw;
+          }
+          &.toTopScreen {
+            top:-3em;
+          }
+        }
+      }
+    }
+  }
+}

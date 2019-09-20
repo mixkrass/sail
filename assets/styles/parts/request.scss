@@ -1,0 +1,57 @@
+.request {
+  margin-bottom:110px;
+  .request-inner {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px 80px;
+    background: linear-gradient(343.05deg, #EE8100 0.77%, #FFA51E 100%);
+    border-radius: 10px;
+    position: relative;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height:100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      pointer-events: none;
+      background-image: url('../img/foot-img.png');
+      background-size: contain;
+      background-position: right center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+    }
+
+    .head {
+      display: inline-block;
+      width: 100%;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 48px;
+      color: #FFFFFF;
+    }
+    .link {
+      font-size: 20px;
+      line-height: 20px;
+      color: #FFFFFF;
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      margin-top:67px;
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height:16px;
+        background-image: url('../img/arrow-w.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        right:-40px;
+        top:50%;
+        transform: translate3d(0,-50%,0);
+      }
+    }
+  }
+}

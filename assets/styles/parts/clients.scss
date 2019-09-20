@@ -1,0 +1,42 @@
+.clients {
+  width: 100%;
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:after {
+      content: "";
+      flex: auto;
+    }
+  }
+  a {
+    min-width: 180px;
+    width: 20%;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom:25px;
+    text-align: center;
+    img {
+      width: 150px;
+      height: auto;
+      //display: none;
+    }
+    //&:before {
+    //  content: '';
+    //  display: inline-block;
+    //  width:180px;
+    //  height:92px;
+    //  background:#F3F7F9;
+    //  border-radius:10px;
+    //}
+
+  }
+  .block-head {
+    width: 100%;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 50px;
+    color: #111820;
+    margin-bottom: 50px;
+  }
+}

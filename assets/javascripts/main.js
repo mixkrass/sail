@@ -20,9 +20,9 @@ $( document ).ready(function() {
     })
 
     if($(window).width()>930) {
-        loopImg($('.col1'), 5000);
-        loopImg($('.col2'), 7000);
-        loopImg($('.col3'), 9000);
+        loopImg($('.col1'), 5);
+        loopImg($('.col2'), 7);
+        loopImg($('.col3'), 9);
     }
     // let helfHeight = $(window).height()/2;
     // let helfWidth = $(window).width()/2;
@@ -95,7 +95,7 @@ $( document ).ready(function() {
         item.find('input').val($(this).attr('href'));
         item.find('.selected').html($(this).html());
         item.removeClass('act')
-       return false;
+        return false;
     });
 
     $('.js-open-contact').click(function () {
@@ -117,7 +117,7 @@ $( document ).ready(function() {
     })
 
     $('.recovery-pass').click(function () {
-       $('.sms').show();
+        $('.sms').show();
         $('.phone').hide();
         return false;
     });
@@ -138,16 +138,25 @@ function setTranslate(xPos, yPos, el) {
 
 function loopImg(item, time){
     var $first = item.find('.item:first-child');
-    $first.animate({
-        'marginTop': '-='+ parseInt($first.outerHeight(true)) +'px'
-    }, time, 'linear', function(){
-        $first.clone().removeAttr('style').appendTo($first.parent());
-        $first.remove();
-        loopImg(item, time);
+    // $first.animate({
+    //     'marginTop': '-='+ parseInt($first.outerHeight(true)) +'px'
+    // }, time, 'linear', function(){
+    //     $first.clone().removeAttr('style').appendTo($first.parent());
+    //     $first.remove();
+    //     loopImg(item, time);
+    //
+    // });
+    TweenMax.fromTo(item, time, {y: '0'}, {y: -1*parseInt($first.outerHeight(true)) +'px', ease: Linear.easeNone, onComplete:TweenLoop, onCompleteParams:[item,time]});
 
-    });
 }
 
+function TweenLoop(item,time){
+    var $first = item.find('.item:first-child');
+    item.removeAttr('style');
+    $first.clone().appendTo($first.parent());
+    $first.remove();
+    loopImg(item, time);
+}
 
 var controller = new ScrollMagic.Controller();
 

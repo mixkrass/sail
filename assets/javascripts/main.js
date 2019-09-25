@@ -102,10 +102,10 @@ $( document ).ready(function() {
         $('.popup-contact').addClass('show');
         return false;
     });
-    $('.js-open-popup-login').click(function () {
-        $('.popup-login').addClass('show');
-        return false;
-    });
+    // $('.js-open-popup-login').click(function () {
+    //     $('.popup-login').addClass('show');
+    //     return false;
+    // });
 
     $('.popup .inner').click(function (e) {
         e.stopPropagation();

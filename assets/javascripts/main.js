@@ -127,6 +127,12 @@ $( document ).ready(function() {
         return false;
     })
 
+    $('.anchor').click(function () {
+        $('html, body').animate({
+            scrollTop: $("#"+$(this).attr('data-to')).offset().top
+        }, 400);
+        return false;
+    })
 });
 
 function setTranslate(xPos, yPos, el) {

@@ -57,7 +57,7 @@ $( document ).ready(function() {
             $('.header').addClass('hide');
             $('.mob-open-menu ').removeClass('open');
         } else {
-            if(st==0){
+            if(st<=15){
                 $('.header').removeClass('hide')
             }
         }

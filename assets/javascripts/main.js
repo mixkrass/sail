@@ -53,7 +53,7 @@ $( document ).ready(function() {
         xScrollPosition = window.scrollX;
         yScrollPosition = window.scrollY;
 
-        if (st > lastScrollTop){
+        if (st > lastScrollTop && lastScrollTop>10){
             $('.header').addClass('hide');
             $('.mob-open-menu ').removeClass('open');
         } else {
